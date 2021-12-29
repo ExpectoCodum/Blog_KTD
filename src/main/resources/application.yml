@@ -1,4 +1,6 @@
 spring:
+  thymeleaf.prefix: /templates
+  thymeleaf.sufix: .html
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
