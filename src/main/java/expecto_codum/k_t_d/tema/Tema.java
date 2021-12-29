@@ -69,4 +69,61 @@ public class Tema {
         lastUpdated = OffsetDateTime.now();
     }
 
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Criadero getBlog() {
+		return blog;
+	}
+
+	public void setBlog(Criadero blog) {
+		this.blog = blog;
+	}
+
+	public Set<Articulo> getTemaArticulos() {
+		return temaArticulos;
+	}
+
+	public void setTemaArticulos(Set<Articulo> temaArticulos) {
+		this.temaArticulos = temaArticulos;
+	}
+
+	public OffsetDateTime getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(OffsetDateTime dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public OffsetDateTime getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(OffsetDateTime lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 }

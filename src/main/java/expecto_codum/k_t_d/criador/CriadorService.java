@@ -61,7 +61,7 @@ public class CriadorService {
     private Criador mapToEntity(final CriadorDTO criadorDTO, final Criador criador) {
         criador.setNombre(criadorDTO.getNombre());
         if (criadorDTO.getCriaderoCriador() != null && (criador.getCriaderoCriador() == null || !criador.getCriaderoCriador().getId().equals(criadorDTO.getCriaderoCriador()))) {
-            final Criadero criaderoCriador = criaderoRepository.findById(criadorDTO.getCriaderoCriador())
+            final Criadero criaderoCriador = criaderoRepository.findById((Long) criadorDTO.getCriaderoCriador())
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "criaderoCriador not found"));
             criador.setCriaderoCriador(criaderoCriador);
         }

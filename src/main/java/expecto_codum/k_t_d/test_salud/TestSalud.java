@@ -64,4 +64,53 @@ public class TestSalud {
         lastUpdated = OffsetDateTime.now();
     }
 
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public LocalDateTime getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(LocalDateTime fecha) {
+		this.fecha = fecha;
+	}
+
+	public Perro getPerroTest() {
+		return perroTest;
+	}
+
+	public void setPerroTest(Perro perroTest) {
+		this.perroTest = perroTest;
+	}
+
+	public OffsetDateTime getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(OffsetDateTime dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public OffsetDateTime getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(OffsetDateTime lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 }

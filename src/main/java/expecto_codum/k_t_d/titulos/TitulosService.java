@@ -37,7 +37,7 @@ public class TitulosService {
     public Long create(final TitulosDTO titulosDTO) {
         final Titulos titulos = new Titulos();
         mapToEntity(titulosDTO, titulos);
-        return titulosRepository.save(titulos).getId();
+        return (Long) titulosRepository.save(titulos).getId();
     }
 
     public void update(final Long id, final TitulosDTO titulosDTO) {

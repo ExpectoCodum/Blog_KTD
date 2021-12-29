@@ -37,7 +37,7 @@ public class TemaService {
     public Long create(final TemaDTO temaDTO) {
         final Tema tema = new Tema();
         mapToEntity(temaDTO, tema);
-        return temaRepository.save(tema).getId();
+        return (Long) temaRepository.save(tema).getId();
     }
 
     public void update(final Long id, final TemaDTO temaDTO) {

@@ -60,4 +60,45 @@ public class Criador {
         lastUpdated = OffsetDateTime.now();
     }
 
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Criadero getCriaderoCriador() {
+		return criaderoCriador;
+	}
+
+	public void setCriaderoCriador(Criadero criaderoCriador) {
+		this.criaderoCriador = criaderoCriador;
+	}
+
+	public OffsetDateTime getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(OffsetDateTime dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public OffsetDateTime getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(OffsetDateTime lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 }

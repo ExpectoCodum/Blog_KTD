@@ -69,4 +69,63 @@ public class Articulo {
         lastUpdated = OffsetDateTime.now();
     }
 
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getTitulo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getDescripcion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
+
+	public Set<Comentarios> getComentComentarioss() {
+		return comentComentarioss;
+	}
+
+	public void setComentComentarioss(Set<Comentarios> comentComentarioss) {
+		this.comentComentarioss = comentComentarioss;
+	}
+
+	public OffsetDateTime getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(OffsetDateTime dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public OffsetDateTime getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(OffsetDateTime lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
 }

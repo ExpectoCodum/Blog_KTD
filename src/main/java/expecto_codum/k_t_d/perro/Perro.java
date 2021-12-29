@@ -98,4 +98,133 @@ public class Perro {
         lastUpdated = OffsetDateTime.now();
     }
 
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public LocalDate getFechaNac() {
+		return fechaNac;
+	}
+
+	public void setFechaNac(LocalDate fechaNac) {
+		this.fechaNac = fechaNac;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public Boolean getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(Boolean sexo) {
+		this.sexo = sexo;
+	}
+
+	public Integer getLoe() {
+		return loe;
+	}
+
+	public void setLoe(Integer loe) {
+		this.loe = loe;
+	}
+
+	public String getRegistro() {
+		return registro;
+	}
+
+	public void setRegistro(String registro) {
+		this.registro = registro;
+	}
+
+	public LocalDate getFechaMuerte() {
+		return fechaMuerte;
+	}
+
+	public void setFechaMuerte(LocalDate fechaMuerte) {
+		this.fechaMuerte = fechaMuerte;
+	}
+
+	public String getPaisOrigen() {
+		return paisOrigen;
+	}
+
+	public void setPaisOrigen(String paisOrigen) {
+		this.paisOrigen = paisOrigen;
+	}
+
+	public Integer getMicrochipNo() {
+		return microchipNo;
+	}
+
+	public void setMicrochipNo(Integer microchipNo) {
+		this.microchipNo = microchipNo;
+	}
+
+	public Raza getRazasPerro() {
+		return razasPerro;
+	}
+
+	public void setRazasPerro(Raza razasPerro) {
+		this.razasPerro = razasPerro;
+	}
+
+	public Set<Titulos> getDetallePerroTituloTituloss() {
+		return detallePerroTituloTituloss;
+	}
+
+	public void setDetallePerroTituloTituloss(Set<Titulos> detallePerroTituloTituloss) {
+		this.detallePerroTituloTituloss = detallePerroTituloTituloss;
+	}
+
+	public Set<TestSalud> getPerroTestTestSaluds() {
+		return perroTestTestSaluds;
+	}
+
+	public void setPerroTestTestSaluds(Set<TestSalud> perroTestTestSaluds) {
+		this.perroTestTestSaluds = perroTestTestSaluds;
+	}
+
+	public OffsetDateTime getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(OffsetDateTime dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public OffsetDateTime getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(OffsetDateTime lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 }

@@ -18,4 +18,29 @@ public class CriadorDTO {
 
     private Long criaderoCriador;
 
+	public void setId(Long id2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setNombre(String nombre2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setCriaderoCriador(Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getCriaderoCriador() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

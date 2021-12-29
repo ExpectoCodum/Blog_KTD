@@ -56,7 +56,7 @@ public class ComentariosService {
         comentariosDTO.setId(comentarios.getId());
         comentariosDTO.setText(comentarios.getText());
         comentariosDTO.setDate(comentarios.getDate());
-        comentariosDTO.setComent(comentarios.getComent() == null ? null : comentarios.getComent().getId());
+        comentariosDTO.setComent(comentarios.getComent() == null ? null : ((Articulo) comentarios.getComent()).getId());
         return comentariosDTO;
     }
 
@@ -64,7 +64,7 @@ public class ComentariosService {
             final Comentarios comentarios) {
         comentarios.setText(comentariosDTO.getText());
         comentarios.setDate(comentariosDTO.getDate());
-        if (comentariosDTO.getComent() != null && (comentarios.getComent() == null || !comentarios.getComent().getId().equals(comentariosDTO.getComent()))) {
+        if (comentariosDTO.getComent() != null && (comentarios.getComent() == null || !((Articulo) comentarios.getComent()).getId().equals(comentariosDTO.getComent()))) {
             final Articulo coment = articuloRepository.findById(comentariosDTO.getComent())
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "coment not found"));
             comentarios.setComent(coment);

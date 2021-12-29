@@ -23,4 +23,58 @@ public class TitulosDTO {
 
     private Long detallePerroTitulo;
 
+	public void setNombre(String nombre2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setId(Object id2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setFecha(LocalDateTime fecha2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDescripcion(String descripcion2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDetallePerroTitulo(Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getDetallePerroTitulo() {
+		return detallePerroTitulo;
+	}
+
+	public void setDetallePerroTitulo(Long detallePerroTitulo) {
+		this.detallePerroTitulo = detallePerroTitulo;
+	}
+
+	public LocalDateTime getFecha() {
+		return fecha;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
 }

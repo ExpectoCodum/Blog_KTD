@@ -64,4 +64,42 @@ public class Comentarios {
         lastUpdated = OffsetDateTime.now();
     }
 
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+	public void setText(Object text2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDate(LocalDate date2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setComent(Articulo coment2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Articulo getComent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }

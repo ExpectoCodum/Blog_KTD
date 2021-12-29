@@ -69,4 +69,61 @@ public class Raza {
         lastUpdated = OffsetDateTime.now();
     }
 
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Criadero getCriadero() {
+		return criadero;
+	}
+
+	public void setCriadero(Criadero criadero) {
+		this.criadero = criadero;
+	}
+
+	public Set<Perro> getRazasPerroPerros() {
+		return razasPerroPerros;
+	}
+
+	public void setRazasPerroPerros(Set<Perro> razasPerroPerros) {
+		this.razasPerroPerros = razasPerroPerros;
+	}
+
+	public OffsetDateTime getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(OffsetDateTime dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public OffsetDateTime getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(OffsetDateTime lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 }

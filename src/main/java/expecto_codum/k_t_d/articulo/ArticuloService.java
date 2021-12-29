@@ -37,7 +37,7 @@ public class ArticuloService {
     public Long create(final ArticuloDTO articuloDTO) {
         final Articulo articulo = new Articulo();
         mapToEntity(articuloDTO, articulo);
-        return articuloRepository.save(articulo).getId();
+        return (Long) articuloRepository.save(articulo).getId();
     }
 
     public void update(final Long id, final ArticuloDTO articuloDTO) {
@@ -63,7 +63,7 @@ public class ArticuloService {
         articulo.setTitulo(articuloDTO.getTitulo());
         articulo.setDescripcion(articuloDTO.getDescripcion());
         if (articuloDTO.getTema() != null && (articulo.getTema() == null || !articulo.getTema().getId().equals(articuloDTO.getTema()))) {
-            final Tema tema = temaRepository.findById(articuloDTO.getTema())
+            final Tema tema = temaRepository.findById((Long) articuloDTO.getTema())
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "tema not found"));
             articulo.setTema(tema);
         }

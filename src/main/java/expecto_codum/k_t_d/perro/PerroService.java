@@ -37,7 +37,7 @@ public class PerroService {
     public Long create(final PerroDTO perroDTO) {
         final Perro perro = new Perro();
         mapToEntity(perroDTO, perro);
-        return perroRepository.save(perro).getId();
+        return (Long) perroRepository.save(perro).getId();
     }
 
     public void update(final Long id, final PerroDTO perroDTO) {
