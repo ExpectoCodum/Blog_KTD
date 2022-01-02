@@ -1,15 +1,21 @@
 spring:
+  thymeleaf.prefix: /templates
+  thymeleaf.sufix: .html
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: postgres
     url: jdbc:postgresql://localhost/ktd
-    platform: postgres
-    initialization-mode: always
-    continue-on-error: true
   jpa:
     show-sql: true
     generate-ddl: true
     hibernate:
       ddl-auto: create
     database: postgresql
+  sql:
+    init:
+      platform: postgres
+      mode: always
+      continue-on-error: true
+server:
+  port : 8082

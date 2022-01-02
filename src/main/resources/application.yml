@@ -3,8 +3,8 @@ spring:
   thymeleaf.sufix: .html
   datasource:
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: postgres
+    username: admin 
+    password: admin
     url: jdbc:postgresql://localhost/ktd
   jpa:
     show-sql: true
