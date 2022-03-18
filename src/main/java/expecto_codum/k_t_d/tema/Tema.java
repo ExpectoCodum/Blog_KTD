@@ -16,6 +16,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.SequenceGenerator;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,7 +31,7 @@ import lombok.Setter;
 public class Tema {
 
     @Id
-    @Column(nullable = false, updatable = false)
+    @Column
     @SequenceGenerator(
             name = "primary_sequence",
             sequenceName = "primary_sequence",
@@ -39,14 +44,15 @@ public class Tema {
     )
     private Long id;
 
-    @Column(unique = true)
+    @Column(unique = true,nullable = false)
     private String nombre;
 
-    @Column(columnDefinition = "text")
+    @Column(columnDefinition = "text")   
     private String descripcion;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "blog_id")
+    @NotNull(message = "Este campo no puede ser nulo")
     private Criadero blog;
 
     @OneToMany(mappedBy = "tema")
@@ -71,7 +77,7 @@ public class Tema {
 
 	public Object getId() {
 		// TODO Auto-generated method stub
-		return null;
+		return id;
 	}
 
 	public String getNombre() {

@@ -4,6 +4,8 @@ import expecto_codum.k_t_d.comentarios.Comentarios;
 import expecto_codum.k_t_d.tema.Tema;
 import java.time.OffsetDateTime;
 import java.util.Set;
+
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,11 +13,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.SequenceGenerator;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -39,23 +47,36 @@ public class Articulo {
     )
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String titulo;
-
-    @Column(columnDefinition = "text")
-    private String descripcion;
-
+    
+    @Lob
+    @Basic(fetch = FetchType.LAZY)
+    @Column(nullable = false)
+    private byte[] descripcion;
+    
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tema_id")
+    //@Column(nullable = false)
     private Tema tema;
 
-    @OneToMany(mappedBy = "coment")
+  	@OneToMany(mappedBy = "coment")
     private Set<Comentarios> comentComentarioss;
 
-    @Column(nullable = false, updatable = false)
+  	@Lob
+  	@Column(name="Contenido",nullable = false)
+  	@NotNull(message = "Este campo no puede ser nulo")
+  	private byte[]contenido;
+  	
+    @Column
+   	private String imagen;//de momento se queda asi
+    
+	@Column(nullable = false, updatable = false)
+	@NotNull(message = "Este campo no puede ser nulo")
     private OffsetDateTime dateCreated;
 
     @Column(nullable = false)
+    @NotNull(message = "Este campo no puede ser nulo")
     private OffsetDateTime lastUpdated;
 
     @PrePersist
@@ -68,20 +89,30 @@ public class Articulo {
     public void preUpdate() {
         lastUpdated = OffsetDateTime.now();
     }
+    public byte[] getContenido() {
+		return contenido;
+	}
+
+	public void setContenido(byte[] contenido) {
+		this.contenido = contenido;
+	}
+
+    public byte[] getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(byte[] descripcion) {
+		this.descripcion = descripcion;
+	}
 
 	public Object getId() {
 		// TODO Auto-generated method stub
-		return null;
+		return id;
 	}
 
 	public Object getTitulo() {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Object getDescripcion() {
-		// TODO Auto-generated method stub
-		return null;
+		return titulo;
 	}
 
 	public Tema getTema() {
@@ -124,8 +155,19 @@ public class Articulo {
 		this.titulo = titulo;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+   
+	public Articulo() {
+		super();
+		
 	}
+
+	@Override
+	public String toString() {
+		return "Articulo [id=" + id + ", titulo=" + titulo + ", descripcion=" + descripcion + ", tema=" + tema
+				+ ", comentComentarioss=" + comentComentarioss + ", dateCreated=" + dateCreated + ", lastUpdated="
+				+ lastUpdated + "]";
+	}
+    
+
 
 }

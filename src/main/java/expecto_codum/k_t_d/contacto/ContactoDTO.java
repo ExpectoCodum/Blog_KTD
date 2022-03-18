@@ -69,7 +69,7 @@ public class ContactoDTO {
 
 	public void setDireccion(String direccion2) {
 		// TODO Auto-generated method stub
-		
+		this.direccion=direccion2;
 	}
 
 	public void setTelefono1(Integer telefono12) {

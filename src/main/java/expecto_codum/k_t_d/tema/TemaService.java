@@ -1,5 +1,6 @@
 package expecto_codum.k_t_d.tema;
 
+import expecto_codum.k_t_d.articulo.ArticuloDTO;
 import expecto_codum.k_t_d.criadero.Criadero;
 import expecto_codum.k_t_d.criadero.CriaderoRepository;
 import java.util.List;
@@ -50,9 +51,11 @@ public class TemaService {
     public void delete(final Long id) {
         temaRepository.deleteById(id);
     }
+    
+    
 
-    private TemaDTO mapToDTO(final Tema tema, final TemaDTO temaDTO) {
-        temaDTO.setId(tema.getId());
+    public TemaDTO mapToDTO(final Tema tema, final TemaDTO temaDTO) {
+        temaDTO.setId((long)tema.getId());
         temaDTO.setNombre(tema.getNombre());
         temaDTO.setDescripcion(tema.getDescripcion());
         temaDTO.setBlog(tema.getBlog() == null ? null : tema.getBlog().getId());
@@ -69,5 +72,7 @@ public class TemaService {
         }
         return tema;
     }
+    
+  
 
 }

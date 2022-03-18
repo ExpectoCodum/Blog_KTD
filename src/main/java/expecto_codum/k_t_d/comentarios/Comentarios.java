@@ -43,7 +43,7 @@ public class Comentarios {
     @Column
     private LocalDate date;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+   @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "coment_id")
     private Articulo coment;
 

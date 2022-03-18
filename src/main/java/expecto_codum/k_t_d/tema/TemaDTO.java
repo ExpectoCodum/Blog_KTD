@@ -1,5 +1,6 @@
 package expecto_codum.k_t_d.tema;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,13 +10,18 @@ import lombok.Setter;
 @Setter
 public class TemaDTO {
 
-    private Long id;
+    @NotNull(message = "El campo id no puede ser nulo")
+	private Long id;
 
-    @Size(max = 255)
+    @Size(min=5, max = 100, message=" El nombre del tema solo admite 100 caracteres")
+    @NotNull(message = "Este campo no puede ser nulo")
     private String nombre;
-
+    
+    @Size(min=10, max = 700,message=" La descripcion debe contener mas de 700 caracteres")
+    @NotNull(message = "Este campo no puede ser nulo")
     private String descripcion;
-
+    
+    @NotNull(message = "El campo id no puede ser nulo")
     private Long blog;
 
 	public void setId(Object id2) {
@@ -55,4 +61,10 @@ public class TemaDTO {
 		this.blog = blog;
 	}
 
+	@Override
+	public String toString() {
+		return "TemaDTO [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", blog=" + blog + "]";
+	}
+    
+	
 }

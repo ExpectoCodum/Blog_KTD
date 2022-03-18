@@ -1,6 +1,5 @@
 spring:
-  thymeleaf.prefix: /templates
-  thymeleaf.sufix: .html
+
   datasource:
     driver-class-name: org.postgresql.Driver
     username: admin 
@@ -10,12 +9,18 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database: postgresql
   sql:
     init:
       platform: postgres
-      mode: always
+      #mode: always
       continue-on-error: true
 server:
-  port : 8082
+  port : 8083
+
+ 
+ 
+ 
+  
+  
