@@ -41,6 +41,7 @@ public class ArticuloService {
                 .stream()
                 .map(articulo -> mapToDTO(articulo, new ArticuloDTO()))
                 .collect(Collectors.toList());
+        
     }
 
     public ArticuloDTO get(final Long id) {
