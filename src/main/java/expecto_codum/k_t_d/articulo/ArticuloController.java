@@ -35,7 +35,7 @@ import expecto_codum.k_t_d.tema.TemaService;
 
 @Controller
 //@RequestMapping(value = "/api/articulos", produces = MediaType.APPLICATION_JSON_VALUE)
-//@RequestMapping("/")//RIKIIIIIIIII AHORA SIIIIIIIII COJONEE
+//@RequestMapping("/")//RIKIIIIIIIII AHORA SIIIIIIIII COJONEE FF
 public class ArticuloController {
 
 	private final ArticuloService articuloService;
